@@ -1,0 +1,50 @@
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}PURPOSE OF THE SYSTEM}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}RELEVANCE AND SCOPE OF THE SYSTEM}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Relevance}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Scope}{6}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}PROBLEM DEFINITION}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}PROBLEM STATEMENT}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}OBJECTIVES}{9}{section.2.2}%
+\contentsline {chapter}{\numberline {3}LITERATURE SURVEY}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Telecom Churn Prediction Frameworks}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Logistic Regression and Traditional Statistical Baselines}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Support Vector Machines and Non-linear Margin Classifiers}{12}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Ensemble Learning and Random Forests}{12}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Artificial Neural Networks and Multi-Layer Perceptrons}{13}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Unsupervised Customer Segmentation and Dimensionality Reduction}{13}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Evaluation Metrics Under Class Imbalance}{13}{section.3.7}%
+\contentsline {chapter}{\numberline {4}PROPOSED SYSTEM AND METHODOLOGY}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}SYSTEM ARCHITECTURE}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}DATASET DESCRIPTION}{16}{section.4.2}%
+\contentsline {section}{\numberline {4.3}DATA PRE-PROCESSING}{17}{section.4.3}%
+\contentsline {section}{\numberline {4.4}FEATURE ANALYSIS}{18}{section.4.4}%
+\contentsline {section}{\numberline {4.5}MODEL BUILDING}{18}{section.4.5}%
+\contentsline {section}{\numberline {4.6}EVALUATION METRICS}{19}{section.4.6}%
+\contentsline {section}{\numberline {4.7}TOOLS AND TECHNOLOGIES}{19}{section.4.7}%
+\contentsline {chapter}{\numberline {5}IMPLEMENTATION}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}DATASET ACQUISITION}{21}{section.5.1}%
+\contentsline {section}{\numberline {5.2}DATA PRE-PROCESSING}{21}{section.5.2}%
+\contentsline {section}{\numberline {5.3}FEATURE ANALYSIS AND EXPLORATORY VISUALIZATIONS}{22}{section.5.3}%
+\contentsline {section}{\numberline {5.4}MODEL BUILDING}{22}{section.5.4}%
+\contentsline {section}{\numberline {5.5}EVALUATION PIPELINE AND CODE STRUCTURE}{23}{section.5.5}%
+\contentsline {chapter}{\numberline {6}RESULTS AND DISCUSSION}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}RESULTS}{25}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Supervised Classification Model Comparison}{25}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Confusion Matrices and Error Breakdown}{26}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}ROC and Precision-Recall Discriminative Curves}{27}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Permutation Feature Importance and Coefficient Interpretation}{28}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}Unsupervised Customer Segmentation (K-Means \& PCA)}{29}{subsection.6.1.5}%
+\contentsline {section}{\numberline {6.2}DISCUSSION}{30}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Algorithm Trade-Offs and Inductive Biases}{30}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Actionable Business Retention Strategy}{31}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Threats to Validity and Study Limitations}{31}{subsection.6.2.3}%
+\contentsline {chapter}{\numberline {7}CONCLUSION}{33}{chapter.7}%
+\contentsline {section}{\numberline {7.1}LIMITATIONS AND FUTURE RESEARCH}{34}{section.7.1}%
+\contentsline {chapter}{\numberline {8}SUSTAINABLE DEVELOPMENT GOALS (SDGS)}{35}{chapter.8}%
+\contentsline {section}{\numberline {8.1}MAPPING TO SUSTAINABLE DEVELOPMENT GOALS}{35}{section.8.1}%
+\contentsline {section}{\numberline {8.2}DETAILED JUSTIFICATION OF GOAL ALIGNMENT}{36}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Alignment with SDG 9: Industry, Innovation and Infrastructure}{36}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Alignment with SDG 8: Decent Work and Economic Growth}{37}{subsection.8.2.2}%
+\contentsline {chapter}{REFERENCES}{38}{subsection.8.2.2}%
+\contentsline {chapter}{APPENDIX: ENVIRONMENT AND REPRODUCIBILITY}{40}{chapter*.19}%

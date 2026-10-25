@@ -1,0 +1,4 @@
+Cluster_ID,Segment_Name,Size,Proportion_pct,Churn_Rate_pct,Avg_Tenure_mo,Avg_Monthly_Charges,Avg_Total_Charges,Dominant_Contract,Dominant_Internet
+0,Value-Oriented Core Customers,1526,21.67,7.4,30.5,21.08,662.6,Two year,No
+1,Long-Term Loyal Enterprise,2330,33.08,15.15,56.9,89.16,5066.05,Two year,Fiber optic
+2,High-Risk Attrition Cohort,3187,45.25,44.02,15.3,67.84,1016.99,Month-to-month,Fiber optic

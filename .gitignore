@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Pytest
+.pytest_cache/
+
+# LaTeX build artifacts
+reports/*.aux
+reports/*.log
+reports/*.out
+reports/*.toc
+reports/*.lof
+reports/*.lot
+reports/*.bbl
+reports/*.blg
+reports/chapters/*.aux
+reports/build/
+
+# IDE
+.idea/
+.vscode/
+*.swp

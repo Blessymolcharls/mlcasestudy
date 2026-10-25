@@ -1,0 +1,44 @@
+\chapter{PROBLEM DEFINITION}
+
+\section{PROBLEM STATEMENT}
+In subscription telecommunications services, customer defection undermines recurring revenue streams and incurs substantial replacement expenditures. Despite storing detailed historical logs regarding demographics, subscribed telecommunication services, contractual obligations, and billing arrangements, service providers frequently lack an integrated analytical pipeline capable of reliably identifying customers at imminent risk of churning. 
+
+This analytical deficit is compounded by several domain-specific machine learning complexities:
+\begin{enumerate}
+    \item \textbf{Class Imbalance:} Real-world churn is naturally asymmetric; in the benchmark IBM Telco dataset, only \datasetChurnProportion{} of subscribers exhibit churn, rendering conventional classification accuracy deceptive and prone to trivial majority-class convergence.
+    \item \textbf{Algorithmic Uncertainty:} It is a priori unknown which family of learning algorithms---linear statistical baselines, nonlinear kernel methods, tree ensembles, or multi-layer neural networks---provides the optimal trade-off between recall sensitivity and precision in identifying churners.
+    \item \textbf{Data Leakage Risks:} Naive feature preprocessing, such as computing global imputation statistics or categorical frequency encodings prior to data splitting, induces systemic data leakage that inflates laboratory metrics while collapsing operational generalization.
+    \item \textbf{Lack of Interpretable Insights:} Black-box predictions devoid of feature-level attributions prevent business teams from understanding the root systemic causes driving defection.
+    \item \textbf{Absence of Customer Granularity:} Monolithic classification treats all churn-prone customers identically, ignoring the natural behavioral heterogeneity that exists across differing tenure and expenditure customer cohorts.
+\end{enumerate}
+
+The problem addressed in this case study is therefore to build a modular, leakage-free, and reproducible machine learning pipeline that accurately predicts individual churn probabilities, evaluates four distinct algorithmic paradigms on an uncorrupted test benchmark, extracts influential churn risk factors, and discovers natural customer groupings through unsupervised clustering to inform evidence-based retention interventions.
+
+\section{OBJECTIVES}
+To address the problem statement comprehensively, the following specific objectives are established:
+
+\begin{itemize}
+    \item[\textbf{Objective 1:}] \textbf{Data Ingestion, Auditing, and Leakage-Free Preprocessing:}\\
+    Acquire and rigorously audit the IBM Telco Customer Churn dataset (\datasetTotalRows{} rows, \datasetTotalCols{} features), rectify anomalous data types (e.g., blank strings in \texttt{TotalCharges}), eliminate identifier bias by separating \texttt{customerID}, and establish an isolated stratified 80:20 train-test partition where numerical imputation/scaling and categorical one-hot encoding are fitted strictly on training data.
+
+    \item[\textbf{Objective 2:}] \textbf{Implementation and Comparative Training of Four Classifiers:}\\
+    Implement and systematically train exactly four distinct classification algorithms with class-weight balancing:
+    \begin{enumerate}
+        \item Logistic Regression (linear baseline with L2 regularization);
+        \item Support Vector Machine with an RBF kernel (nonlinear margin-based classifier);
+        \item Random Forest Classifier (ensemble bagging with shallow decision trees);
+        \item Multi-Layer Perceptron (feedforward neural network with ReLU activation and adaptive Adam optimization).
+    \end{enumerate}
+
+    \item[\textbf{Objective 3:}] \textbf{Multi-Dimensional Test-Set Performance Evaluation:}\\
+    Evaluate the four trained models on the uncorrupted held-out test split ($N=1,409$) utilizing a comprehensive suite of metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC, PR-AUC (Average Precision), Specificity, and Balanced Accuracy. Analyze the precision-recall trade-off to determine the most defensively justified model for operational deployment.
+
+    \item[\textbf{Objective 4:}] \textbf{Feature Importance and Interpretability Analysis:}\\
+    Perform model-agnostic permutation feature importance on the held-out test set to identify and rank the primary structural drivers of customer churn, complemented by Logistic Regression log-odds coefficient analysis to distinguish protective retention factors from attrition risk factors.
+
+    \item[\textbf{Objective 5:}] \textbf{Unsupervised Customer Segmentation and Profiling:}\\
+    Execute K-Means clustering and Principal Component Analysis (PCA) strictly in the absence of the target variable (\texttt{Churn}), systematically determine the optimal cluster count $k$ through joint Elbow (Inertia) and Silhouette score analysis, and conduct post-hoc profiling to uncover distinct customer cohorts with differing churn propensities.
+
+    \item[\textbf{Objective 6:}] \textbf{Actionable Business Interpretation and Academic Synthesis:}\\
+    Translate empirical predictive metrics and cluster archetypes into targeted, evidence-based retention policies, map project competencies to institutional Course Outcomes (CO1--CO4), program outcomes, and formulate project relevance to Sustainable Development Goals (SDG 9 and SDG 8).
+\end{itemize}

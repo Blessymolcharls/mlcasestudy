@@ -1,0 +1,20 @@
+=== ML_CO-PO PSO MAPPING.pdf ===
+Pages: 1
+
+--- PAGE 1 ---
+COURSE OUTCOMES
+CO1 Apply Machine Learning concepts and basic parameter estimation methods to solve data-
+driven problems.
+CO2 Demonstrate regression and classification algorithms and performance measures to evaluate 
+machine learning models.
+CO3 Illustrate the concepts of Neural Networks and Support Vector Machines in Machine learning 
+problems.
+CO4 Demonstrate unsupervised learning concepts, ensemble methods and dimensionality 
+reduction techniques to comprehend complex data patterns.
+CO – PO / PSO ARTICULATION MATRIX
+CO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PSO1 PSO2
+CO1 3 2 2 – – – – – – – 2 3 2
+CO2 3 3 3 2 3 – – – – – 2 3 2
+CO3 2 2 3 – 3 – – – – – 2 3 2
+CO4 2 3 2 3 2 – – – – – 2 3 2
+

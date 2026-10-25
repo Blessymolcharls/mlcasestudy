@@ -1,0 +1,46 @@
+\chapter{INTRODUCTION}
+
+\section{PURPOSE OF THE SYSTEM}
+The modern telecommunications industry operates in an intensely saturated and competitive landscape characterized by deregulated markets, standardized service offerings, and low customer switching barriers. Under these market dynamics, customer attrition---conventionally termed ``churn''---represents one of the most critical threats to enterprise viability and long-term profitability. Empirical studies across telecommunications and subscription economies indicate that the cost of acquiring a new customer is approximately five to twenty times higher than retaining an existing subscriber \citep{coussement2008churn, verbeke2012building}. Consequently, telecommunications operators are transitioning from aggressive acquisition-driven growth strategies toward proactive, relationship-oriented customer retention frameworks.
+
+The purpose of this machine learning system is to establish a rigorous, data-driven analytical architecture that:
+\begin{enumerate}
+    \item Systematically processes and standardizes heterogenous customer data without procedural data leakage;
+    \item Evaluates and compares four distinct supervised classification algorithms possessing differing mathematical formulations and inductive biases to identify subscribers demonstrating elevated attrition likelihood;
+    \item Quantifies the relative empirical importance of demographic, contractual, and service features associated with churn;
+    \item Discovers intrinsic, natural customer segments via unsupervised learning to facilitate differentiated operational and service interventions;
+    \item Supplies actionable decision support to customer retention and customer service units.
+\end{enumerate}
+
+Importantly, the proposed system is designed as an investigative decision-support tool rather than an automated preventative agent. The system does not directly prevent churn; rather, it quantifies risk probabilities and surfaces underlying behavioural patterns, enabling customer success teams to deploy timely, economically justified retention initiatives.
+
+\section{RELEVANCE AND SCOPE OF THE SYSTEM}
+
+\subsection{Relevance}
+Customer churn exerts severe downstream ramifications across multiple dimensions of a telecommunications provider:
+\begin{itemize}
+    \item \textbf{Direct Revenue Attrition:} Departing customers immediately diminish recurring service revenue and contract cash flows, undermining capital expenditure amortization on physical broadband and cellular infrastructure.
+    \item \textbf{Asymmetric Customer Acquisition Costs (CAC):} Replacing lost subscribers requires substantial marketing expenditure, promotional discounting, sales commissions, and customer onboarding overhead.
+    \item \textbf{Brand Erosion and Competitive Dilution:} Dissatisfied customers migrating to rival telecommunication networks frequently propagate negative sentiment, diminishing organic referral pipelines.
+    \item \textbf{Operational Blindspots:} In the absence of automated predictive modeling, retention teams typically react only after a subscriber submits a formal termination request, at which juncture the propensity to salvage the relationship is statistically minimal.
+\end{itemize}
+
+By developing an empirical predictive system capable of flagging churn signals weeks or months before formal cancellation, service operators can intervene strategically while customer satisfaction remains recoverable.
+
+\subsection{Scope}
+The scope of this case study encompasses the complete machine learning lifecycle applied to the benchmark IBM Telco Customer Churn dataset (\datasetTotalRows{} subscribers, \datasetTotalCols{} attributes):
+\begin{itemize}
+    \item \textbf{Data Ingestion and Integrity Auditing:} Verifying schema validity, data types, duplicate entries, and handling missing numerical values in cumulative billing fields.
+    \item \textbf{Leakage-Free Preprocessing Pipeline:} Constructing isolated transformers for continuous and categorical predictors, fitted exclusively on a stratified training set (\datasetTrainCount{} records).
+    \item \textbf{Supervised Comparative Modeling:} Implementing exactly four primary classification algorithms:
+    \begin{enumerate}
+        \item Logistic Regression (linear baseline and odds-ratio analysis);
+        \item Support Vector Machine with an RBF kernel (nonlinear margin-based classification);
+        \item Random Forest Classifier (ensemble bagging with decision trees);
+        \item Multi-Layer Perceptron (feedforward neural network).
+    \end{enumerate}
+    \item \textbf{Multi-Metric Model Evaluation:} Evaluating held-out test data (\datasetTestCount{} records) across Accuracy, Precision, Recall, F1-score, ROC-AUC, PR-AUC, Specificity, and Balanced Accuracy, with explicit analysis of the false negative versus false positive trade-off under class imbalance (\datasetChurnProportion{} churn prevalence).
+    \item \textbf{Feature Importance and Interpretability:} Model-agnostic permutation feature importance and linear log-odds coefficient analyses.
+    \item \textbf{Unsupervised Customer Segmentation:} K-Means clustering and Principal Component Analysis (PCA) dimensionality reduction conducted strictly without target label contamination, accompanied by post-hoc cluster profiling.
+    \item \textbf{Actionable Retention Recommendations:} Pragmatic business interpretations contextualized within Sustainable Development Goals (SDG 9 and SDG 8).
+\end{itemize}

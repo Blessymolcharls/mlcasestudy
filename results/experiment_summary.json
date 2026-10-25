@@ -1,0 +1,134 @@
+{
+    "execution_date": "2026-10-25 16:18:51",
+    "total_runtime_seconds": 147.83,
+    "dataset": {
+        "name": "IBM Telco Customer Churn",
+        "total_records": 7043,
+        "total_features": 21,
+        "train_size": 5634,
+        "test_size": 1409,
+        "random_seed": 42,
+        "test_split_ratio": 0.2,
+        "cv_folds": 5
+    },
+    "best_classification_model": {
+        "name": "Random Forest",
+        "f1_score": 0.6253,
+        "roc_auc": 0.8427,
+        "accuracy": 0.7559,
+        "precision": 0.5276,
+        "recall": 0.7674,
+        "pr_auc": 0.6554
+    },
+    "all_models_summary": [
+        {
+            "Model": "Random Forest",
+            "Accuracy": 0.7559,
+            "Precision": 0.5276,
+            "Recall": 0.7674,
+            "F1-score": 0.6253,
+            "ROC-AUC": 0.8427,
+            "PR-AUC": 0.6554,
+            "Specificity": 0.7517,
+            "Balanced_Accuracy": 0.7595,
+            "True_Negatives": 778,
+            "False_Positives": 257,
+            "False_Negatives": 87,
+            "True_Positives": 287,
+            "Training_Time_s": 11.11
+        },
+        {
+            "Model": "Support Vector Machine",
+            "Accuracy": 0.7452,
+            "Precision": 0.5133,
+            "Recall": 0.7727,
+            "F1-score": 0.6169,
+            "ROC-AUC": 0.8213,
+            "PR-AUC": 0.5861,
+            "Specificity": 0.7353,
+            "Balanced_Accuracy": 0.754,
+            "True_Negatives": 761,
+            "False_Positives": 274,
+            "False_Negatives": 85,
+            "True_Positives": 289,
+            "Training_Time_s": 72.5
+        },
+        {
+            "Model": "Logistic Regression",
+            "Accuracy": 0.7381,
+            "Precision": 0.5043,
+            "Recall": 0.7834,
+            "F1-score": 0.6136,
+            "ROC-AUC": 0.8415,
+            "PR-AUC": 0.6325,
+            "Specificity": 0.7217,
+            "Balanced_Accuracy": 0.7526,
+            "True_Negatives": 747,
+            "False_Positives": 288,
+            "False_Negatives": 81,
+            "True_Positives": 293,
+            "Training_Time_s": 0.83
+        },
+        {
+            "Model": "Multi-Layer Perceptron",
+            "Accuracy": 0.8034,
+            "Precision": 0.6678,
+            "Recall": 0.516,
+            "F1-score": 0.5822,
+            "ROC-AUC": 0.8342,
+            "PR-AUC": 0.6225,
+            "Specificity": 0.9072,
+            "Balanced_Accuracy": 0.7116,
+            "True_Negatives": 939,
+            "False_Positives": 96,
+            "False_Negatives": 181,
+            "True_Positives": 193,
+            "Training_Time_s": 21.45
+        }
+    ],
+    "unsupervised_segmentation": {
+        "selected_k": 3,
+        "pca_explained_variance_ratio": [
+            0.28566911691051694,
+            0.18920511045902172
+        ],
+        "cluster_profiles": [
+            {
+                "Cluster_ID": 0,
+                "Segment_Name": "Value-Oriented Core Customers",
+                "Size": 1526,
+                "Proportion_pct": 21.67,
+                "Churn_Rate_pct": 7.4,
+                "Avg_Tenure_mo": 30.5,
+                "Avg_Monthly_Charges": 21.08,
+                "Avg_Total_Charges": 662.6,
+                "Dominant_Contract": "Two year",
+                "Dominant_Internet": "No"
+            },
+            {
+                "Cluster_ID": 1,
+                "Segment_Name": "Long-Term Loyal Enterprise",
+                "Size": 2330,
+                "Proportion_pct": 33.08,
+                "Churn_Rate_pct": 15.15,
+                "Avg_Tenure_mo": 56.9,
+                "Avg_Monthly_Charges": 89.16,
+                "Avg_Total_Charges": 5066.05,
+                "Dominant_Contract": "Two year",
+                "Dominant_Internet": "Fiber optic"
+            },
+            {
+                "Cluster_ID": 2,
+                "Segment_Name": "High-Risk Attrition Cohort",
+                "Size": 3187,
+                "Proportion_pct": 45.25,
+                "Churn_Rate_pct": 44.02,
+                "Avg_Tenure_mo": 15.3,
+                "Avg_Monthly_Charges": 67.84,
+                "Avg_Total_Charges": 1016.99,
+                "Dominant_Contract": "Month-to-month",
+                "Dominant_Internet": "Fiber optic"
+            }
+        ]
+    }
+}

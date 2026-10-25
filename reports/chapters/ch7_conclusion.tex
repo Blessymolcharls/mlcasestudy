@@ -1,0 +1,19 @@
+\chapter{CONCLUSION}
+
+In this case study, an end-to-end, reproducible machine learning and customer segmentation system was designed, implemented, and rigorously evaluated on the benchmark IBM Telco Customer Churn dataset (\datasetTotalRows{} subscriber records across \datasetTotalCols{} attributes). The project addressed critical domain challenges, including class imbalance (\datasetChurnProportion{} positive class prevalence), data leakage prevention, multi-algorithm benchmarking, model interpretability, and unsupervised customer profiling.
+
+The empirical investigation produced several definitive findings:
+\begin{enumerate}
+    \item \textbf{Supervised Benchmark Comparison:} Evaluated on an uncorrupted held-out test split of 1,409 customers, \textbf{\bestModelName{}} demonstrated the highest overall discriminative performance, achieving an F1-score of \textbf{\bestModelFOne{}}, an ROC-AUC of \textbf{\bestModelRocAuc{}}, and a PR-AUC of \textbf{\bestModelPrAuc{}}. Support Vector Machine (F1 = \SupportVectorMachineFOne{}) and Logistic Regression (F1 = \LogisticRegressionFOne{}) performed competitively. Logistic Regression achieved the highest individual churn sensitivity (Recall = \LogisticRegressionRec{}) with minimal computational latency (2.44 seconds). The Multi-Layer Perceptron delivered superior precision (66.78\%) and accuracy (80.34\%) but suffered from lower recall (51.60\%).
+    \item \textbf{Predictive Factor Attribution:} Model-agnostic permutation importance on the test set established that contract duration commitments (particularly month-to-month contracts), customer subscription tenure, and cumulative billing amounts represent the three most influential predictors of subscriber attrition. Log-odds coefficient analysis corroborated that month-to-month contracts elevate churn odds by more than double ($\text{OR} = 2.03$), whereas long tenure ($\text{OR} = 0.25$) and two-year commitments ($\text{OR} = 0.48$) act as powerful protective anchors.
+    \item \textbf{Unsupervised Segmentation Architecture:} Executing K-Means clustering and PCA strictly without target contamination revealed three natural customer cohorts: a stable, low-cost telephony segment (\clusterZeroName{}, 7.4\% churn rate); a high-value, highly retained broadband segment (\clusterOneName{}, 15.2\% churn rate); and an unstable, high-expenditure fiber optic segment (\clusterTwoName{}, 44.0\% churn rate).
+    \item \textbf{Translational Decision Support:} By linking churn probabilities with behavioral clusters, the system enables telecommunications providers to direct proactive retention investments toward early-tenure month-to-month subscribers while avoiding superfluous marketing expenditures on organically loyal cohorts.
+\end{enumerate}
+
+\section{LIMITATIONS AND FUTURE RESEARCH}
+While the deliverable establishes a working, academically sound methodology, future research could extend this work in several fruitful directions:
+\begin{itemize}
+    \item \textbf{Sequential Time-Series Ingestion:} Transitioning from static tabular snapshots to recurrent or temporal architectures (such as Long Short-Term Memory networks or Temporal Convolutional Networks) capable of processing sequential call-detail records (CDR) and real-time network quality telemetry.
+    \item \textbf{Cost-Sensitive Threshold Tuning:} Dynamically optimizing the classification decision threshold based on formal corporate cost-utility matrices, explicitly factoring in customer lifetime value (CLV) and retention campaign marginal costs.
+    \item \textbf{Causal Inference and Uplift Modeling:} Implementing uplift modeling (e.g., Two-Model or X-Learner frameworks) to differentiate true ``persuadable'' customers from ``sure things'' or ``lost causes,'' thereby proving genuine incremental intervention effectiveness rather than observational association.
+\end{itemize}

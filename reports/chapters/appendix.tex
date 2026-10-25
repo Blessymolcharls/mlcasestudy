@@ -1,0 +1,93 @@
+\chapter*{APPENDIX: ENVIRONMENT AND REPRODUCIBILITY}
+\addcontentsline{toc}{chapter}{APPENDIX: ENVIRONMENT AND REPRODUCIBILITY}
+
+This appendix provides technical setup instructions, software dependency specifications, and execution instructions to reproduce the complete machine learning pipeline and generated artifacts.
+
+\section*{A.1 Software Environment and Dependencies}
+The case study was implemented and tested on a 64-bit Windows operating environment using Python 3.13.5. Core library dependencies pinned for exact reproducibility include:
+\begin{itemize}
+    \item \texttt{pandas == 3.0.5}: Tabular data structures and data cleaning.
+    \item \texttt{numpy == 2.3.4}: Numerical array manipulation and vectorized computations.
+    \item \texttt{scikit-learn == 1.9.0}: Machine learning preprocessing pipelines, classifiers, cross-validation, and metrics.
+    \item \texttt{matplotlib == 3.10.7} \& \texttt{seaborn == 0.13.2}: Headless vector and 300 DPI chart generation.
+    \item \texttt{joblib == 1.5.2}: Model and preprocessor pipeline serialization.
+    \item \texttt{pytest == 9.1.1}: Automated unit testing and assertion validation.
+    \item \texttt{MiKTeX == 25.12} (\texttt{pdfTeX 4.23}): LaTeX compilation engine.
+\end{itemize}
+
+\section*{A.2 Repository Structure}
+The repository is organized into distinct, modular functional packages:
+{\footnotesize
+\begin{verbatim}
+mlcasestudy/
+    README.md                   <- Comprehensive project and setup documentation
+    requirements.txt            <- Exact Python dependency version specifications
+    pytest.ini                  <- Pytest configuration for test path discovery
+    data/
+        raw/                    <- Original IBM Telco Customer Churn CSV dataset
+        processed/              <- Leakage-free train/test parquet files and labels
+    src/
+        config.py               <- Project constants, file paths, and random seeds
+        data_loader.py          <- Dataset ingestion and automated auditing
+        preprocessing.py        <- Data cleaning and stratified ColumnTransformer
+        eda.py                  <- 300 DPI exploratory data analysis charts
+        generate_architecture_diagram.py <- System flowchart generator
+        train_models.py         <- Model fitting and 5-fold cross-validation
+        evaluate_models.py      <- Test-set evaluation and confusion matrix plots
+        feature_analysis.py     <- Permutation importance and log-odds coefficients
+        segmentation.py         <- Unsupervised K-Means clustering and PCA
+        report_data.py          <- LaTeX macro synchronization generator
+        run_pipeline.py         <- Master single-command pipeline orchestrator
+    models/                     <- Serialized .joblib preprocessor and model artifacts
+    results/
+        figures/                <- 300 DPI generated visualization graphics
+        confusion_matrices/     <- CSV confusion matrices for all classifiers
+        dataset_audit.json      <- Machine-readable dataset audit log
+        model_comparison.csv    <- Complete empirical metric table
+        predictions.csv         <- Customer-level predictions and probability scores
+        experiment_summary.json <- Master machine-readable run summary
+    reports/
+        main.tex                <- Master LaTeX document matching college template
+        references.bib          <- Peer-reviewed academic bibliography
+        chapters/               <- Modular chapter TeX source files
+        figures/                <- Synchronized report graphics (300 DPI)
+        tables/                 <- Generated LaTeX table snippets
+        generated/              <- Auto-generated LaTeX experimental macros
+    tests/
+        test_data_loader.py     <- Integrity assertions for data ingestion
+        test_preprocessing.py   <- Assertions for leakage-free preprocessing
+        test_metrics.py         <- Assertions for evaluation metrics and shapes
+        test_segmentation.py    <- Assertions for unsupervised cluster formation
+\end{verbatim}
+}
+
+\section*{A.3 Pipeline Reproduction Instructions}
+To reproduce the complete machine learning case study from scratch on a clean system, execute the following PowerShell commands:
+
+\begin{enumerate}
+    \item \textbf{Set up Virtual Environment and Install Dependencies:}
+\begin{verbatim}
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+\end{verbatim}
+
+    \item \textbf{Execute Complete Machine Learning Workflow:}
+\begin{verbatim}
+python -m src.run_pipeline
+\end{verbatim}
+
+    \item \textbf{Execute Automated Test Suite:}
+\begin{verbatim}
+pytest -v
+\end{verbatim}
+
+    \item \textbf{Compile Formal Academic LaTeX Report:}
+\begin{verbatim}
+cd reports
+pdflatex -interaction=nonstopmode main.tex
+bibtex main
+pdflatex -interaction=nonstopmode main.tex
+pdflatex -interaction=nonstopmode main.tex
+\end{verbatim}
+\end{enumerate}

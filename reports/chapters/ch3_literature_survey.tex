@@ -1,0 +1,72 @@
+\chapter{LITERATURE SURVEY}
+
+Customer churn prediction and behavioral customer segmentation represent mature, highly researched subfields within machine learning, data mining, and customer relationship management (CRM). Over the past three decades, research has progressed from simple univariate statistical thresholds to sophisticated nonlinear margin classifiers, ensemble learning techniques, deep artificial neural networks, and hybrid segmentation pipelines. This chapter provides a structured academic survey synthesized across seven core thematic areas directly pertinent to telecommunications subscriber attrition.
+
+\section{Telecom Churn Prediction Frameworks}
+In telecommunications, customer churn is characterized as the voluntary or involuntary migration of a customer from an incumbent service provider to a competitor or the outright termination of telecommunication service \citep{verbeke2012building}. Seminal early work established that churn modeling requires a specialized operational pipeline due to high dimensionality, mixed data types (demographic variables, usage logs, billing contracts), and class imbalance \citep{coussement2008churn}. 
+
+\citet{vafeiadis2015comparison} benchmarked popular machine learning techniques across telecommunications datasets, demonstrating that predictive models substantially outperform heuristic business scoring rules. They emphasized that telecommunications operators must balance predictive sensitivity (capturing as many churners as possible) against false positive rates (to avoid squandering costly retention incentives on non-churners). Furthermore, the literature underscores that predictive models do not act autonomously; rather, they serve as analytical filters feeding operational CRM platforms.
+
+\section{Logistic Regression and Traditional Statistical Baselines}
+Logistic Regression represents the traditional, parametric benchmark in credit risk, epidemiology, and churn prediction \citep{hastie2009elements}. By modeling the log-odds of binary customer attrition as a linear combination of standardized input features:
+\begin{equation}
+    \ln\left(\frac{P(Y=1 \mid \mathbf{x})}{1 - P(Y=1 \mid \mathbf{x})}\right) = \beta_0 + \mathbf{w}^T \mathbf{x}
+\end{equation}
+Logistic Regression provides transparent, easily auditable coefficients that map directly to multiplicative odds ratios ($\text{OR}_j = \exp(w_j)$). 
+
+\citet{coussement2008churn} demonstrated that when properly regularized with L2 ridge penalties and calibrated for class imbalance, Logistic Regression delivers robust baseline accuracy and exceptional computational efficiency. However, its fundamental limitation lies in its inability to autonomously capture nonlinear decision boundaries or complex feature interactions (e.g., how the churn risk associated with high monthly charges changes radically as a function of contract tenure) without manual interaction engineering.
+
+\section{Support Vector Machines and Non-linear Margin Classifiers}
+Support Vector Machines (SVM), originally formulated by \citet{cortes1995support}, overcome the linearity constraints of logistic models by mapping input features into higher-dimensional reproducing kernel Hilbert spaces (RKHS) where an optimal separating hyperplane is constructed:
+\begin{equation}
+    \min_{\mathbf{w}, b, \boldsymbol{\xi}} \frac{1}{2} \|\mathbf{w}\|^2 + C \sum_{i=1}^N \xi_i \quad \text{subject to} \quad y_i (\mathbf{w}^T \phi(\mathbf{x}_i) + b) \ge 1 - \xi_i, \quad \xi_i \ge 0
+\end{equation}
+Utilizing the Radial Basis Function (RBF) kernel:
+\begin{equation}
+    K(\mathbf{x}_i, \mathbf{x}_j) = \exp\left(-\gamma \|\mathbf{x}_i - \mathbf{x}_j\|^2\right)
+\end{equation}
+SVMs identify complex, nonlinear boundaries while maintaining structural risk minimization. 
+
+\citet{coussement2008churn} established that RBF-kernel SVMs frequently surpass logistic regression in churn discrimination because customer attrition boundaries often exhibit subtle geometric non-convexities. Nevertheless, SVMs suffer from significant computational overhead during training ($O(N^2)$ to $O(N^3)$ computational scaling) and do not natively output posterior class probabilities without secondary calibration mechanisms such as Platt scaling.
+
+\section{Ensemble Learning and Random Forests}
+Ensemble learning principles, formalized by \citet{breiman2001random}, combine multiple weak or base decision tree learners to achieve a composite model possessing dramatically reduced variance without a corresponding increase in bias. In the Random Forest algorithm, bootstrap aggregation (bagging) is combined with random feature subspace sampling at every split node. 
+
+In customer churn analytics, \citet{verbeke2012building} demonstrated that Random Forest classifiers consistently rank among the top-performing algorithms across diverse customer attrition benchmarks. Random forests inherently handle mixed data types (numerical and one-hot categorical features), resist overfitting through variance reduction, model high-order nonlinear interactions natively, and provide intrinsic mechanisms for ranking variable importance.
+
+\section{Artificial Neural Networks and Multi-Layer Perceptrons}
+Artificial Neural Networks (ANN), driven by the backpropagation algorithm \citep{rumelhart1986learning}, provide universal function approximation capabilities. A Multi-Layer Perceptron (MLP) passes inputs through one or more hidden layers equipped with nonlinear activation functions (such as the Rectified Linear Unit, $\text{ReLU}(z) = \max(0, z)$) to learn hierarchical representations:
+\begin{equation}
+    \mathbf{h}^{(1)} = \sigma(\mathbf{W}^{(1)} \mathbf{x} + \mathbf{b}^{(1)}), \quad \hat{y} = \text{sigmoid}(\mathbf{w}^{(2)T} \mathbf{h}^{(1)} + b^{(2)})
+\end{equation}
+
+In telecom churn literature, \citet{vafeiadis2015comparison} observed that while MLPs are capable of competitive predictive accuracy, they require careful parameter tuning, numerical scaling, and regularization (weight decay and early stopping) to prevent premature convergence or catastrophic overfitting on moderately sized tabular datasets. Furthermore, standard neural architectures do not provide straightforward coefficient transparency, rendering secondary interpretability tools essential.
+
+\section{Unsupervised Customer Segmentation and Dimensionality Reduction}
+Supervised churn models classify customer risk, but they do not delineate the underlying structural archetypes characterizing a customer base. Unsupervised clustering, notably the K-Means algorithm \citep{macqueen1967some}, partitions $N$ observations into $k$ disjoint Voronoi cells by minimizing within-cluster sum of squares (WCSS / Inertia):
+\begin{equation}
+    J = \sum_{j=1}^k \sum_{\mathbf{x}_i \in S_j} \|\mathbf{x}_i - \boldsymbol{\mu}_j\|^2
+\end{equation}
+To determine the optimal number of clusters $k$, \citet{rousseeuw1987silhouettes} introduced the Silhouette coefficient, measuring the cohesion of an observation within its own cluster relative to its separation from neighboring clusters:
+\begin{equation}
+    s(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
+\end{equation}
+
+In modern CRM architectures, unsupervised customer segmentation is conducted on demographic and service attributes strictly without the churn label. Subsequent post-hoc profiling allows retention teams to distinguish low-tenure, high-spend churners from long-term, low-spend loyalists, designing customized interventions for each segment. Principal Component Analysis (PCA) is commonly paired with K-Means to project the multidimensional Voronoi boundaries onto a two-dimensional visual subspace.
+
+\section{Evaluation Metrics Under Class Imbalance}
+Class imbalance is ubiquitous in customer churn modeling, where retained customers substantially outnumber churners (\citet{chawla2002smote}). Traditional accuracy:
+\begin{equation}
+    \text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}
+\end{equation}
+is notoriously misleading; a trivial null classifier predicting zero churn achieves 73.5\% accuracy on a 26.5\% churn dataset while identifying zero at-risk customers. 
+
+Consequently, modern machine learning evaluation mandates decoupled threshold-independent and threshold-dependent measures \citep{fawcett2006introduction, davis2006relationship}:
+\begin{itemize}
+    \item \textbf{Precision and Recall:} Precision ($\text{TP} / (\text{TP} + \text{FP})$) measures the fidelity of churn alerts, while Recall ($\text{TP} / (\text{TP} + \text{FN})$) measures churner capture sensitivity.
+    \item \textbf{F1-Score:} The harmonic mean of precision and recall ($2 \cdot \frac{P \cdot R}{P + R}$), penalizing extreme trade-offs.
+    \item \textbf{ROC-AUC:} The Area Under the Receiver Operating Characteristic curve, measuring discrimination across all operational decision thresholds \citep{fawcett2006introduction}.
+    \item \textbf{PR-AUC (Average Precision):} The Area Under the Precision-Recall curve, recognized by \citet{davis2006relationship} as a more reliable indicator than ROC-AUC when evaluating highly skewed positive classes.
+\end{itemize}
+
+This case study synthesizes these foundational insights by implementing all four algorithmic paradigms within a strictly leak-free, reproducible pipeline and applying balanced evaluation metrics on actual empirical results.

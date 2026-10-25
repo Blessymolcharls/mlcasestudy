@@ -1,0 +1,144 @@
+% ==============================================================================
+% PRELIMINARY PAGES: TITLE PAGE, CERTIFICATE, ABSTRACT & CO-PO / SDG TABLES
+% ==============================================================================
+
+% ------------------------------------------------------------------------------
+% 1. TITLE PAGE
+% ------------------------------------------------------------------------------
+\begin{titlepage}
+\begin{center}
+    \vspace*{0.5cm}
+    {\bfseries\LARGE CUSTOMER CHURN PREDICTION AND SEGMENTATION FOR A TELECOM COMPANY\par}
+    
+    \vspace{1.5cm}
+    {\large A CASE STUDY REPORT\par}
+    \vspace{0.4cm}
+    {\large submitted by\par}
+    \vspace{0.4cm}
+    {\large\bfseries BLESSY MOL CHARLS\par}
+    {\large (Register No: MUT24CA029)\par}
+    
+    \vspace{1.0cm}
+    {\large as part of the course\par}
+    \vspace{0.2cm}
+    {\large\bfseries CST 306 - MACHINE LEARNING\par}
+    
+    \vspace{1.2cm}
+    {\large to\par}
+    \vspace{0.2cm}
+    {\large The APJ Abdul Kalam Technological University in partial fulfilment of the requirements for the award of the Degree\par}
+    \vspace{0.2cm}
+    {\large of\par}
+    \vspace{0.2cm}
+    {\large\bfseries Bachelor of Technology\par}
+    \vspace{0.2cm}
+    {\large In\par}
+    \vspace{0.2cm}
+    {\large\bfseries Computer Science and Engineering\par}
+    
+    \vspace{1.2cm}
+    {\large Department of Computer Science and Engineering\par}
+    \vspace{0.2cm}
+    {\large\bfseries Muthoot Institute of Technology and Science\par}
+    \vspace{0.1cm}
+    {\large Varikoli, Ernakulam -- 682308\par}
+    \vspace{0.4cm}
+    {\large October 2026\par}
+\end{center}
+\end{titlepage}
+
+% ------------------------------------------------------------------------------
+% 2. CERTIFICATE PAGE
+% ------------------------------------------------------------------------------
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    {\bfseries\LARGE DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING\par}
+    {\bfseries\large MUTHOOT INSTITUTE OF TECHNOLOGY AND SCIENCE\par}
+    {\large Varikoli, Ernakulam -- 682308\par}
+    \vspace{1.0cm}
+    {\bfseries\Large CERTIFICATE\par}
+\end{center}
+
+\vspace{0.8cm}
+\noindent This is to certify that the report entitled \textbf{``Customer Churn Prediction and Segmentation for a Telecom Company''}, submitted by \textbf{BLESSY MOL CHARLS (MUT24CA029)} to \textbf{Muthoot Institute of Technology and Science} for the award of the degree of \textbf{Bachelor of Technology in Computer Science and Engineering}, is a bonafide record of the course project work carried out by her, as part of the course \textbf{CST 306 Machine Learning}, under my supervision and guidance.
+
+\vspace{3.5cm}
+\begin{flushright}
+    \textbf{[FACULTY NAME]}\\[0.15cm]
+    Faculty-in-charge\\
+    Department of Computer Science and Engineering\\
+    Muthoot Institute of Technology and Science
+\end{flushright}
+
+\vspace{2.0cm}
+\noindent Place: Varikoli, Ernakulam\\
+Date: 27/10/2026
+
+% ------------------------------------------------------------------------------
+% 3. ABSTRACT & CO-PO/PSO & SDG ADDRESSED
+% ------------------------------------------------------------------------------
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{2}
+
+\begin{center}
+    {\bfseries\Large ABSTRACT\par}
+\end{center}
+\vspace{0.2cm}
+
+\noindent Customer churn poses a substantial financial and operational challenge for telecommunications service providers, where acquiring new subscribers is considerably more expensive than retaining existing ones. In this case study, an end-to-end, reproducible machine learning workflow is designed and evaluated on the benchmark IBM Telco Customer Churn dataset (\datasetTotalRows{} customer records across \datasetTotalCols{} features). To prevent data leakage, a strict stratified 80:20 train-test partition is employed, fitting all preprocessing and feature scaling exclusively on the training split (\datasetTrainCount{} records). 
+
+Four distinct classification algorithms representing complementary inductive biases were evaluated on the held-out test set (\datasetTestCount{} records): Logistic Regression, Support Vector Machine (RBF kernel), Random Forest, and Multi-Layer Perceptron (MLP). Experimental results demonstrate that \textbf{\bestModelName{}} achieved the highest balanced performance with an F1-score of \textbf{\bestModelFOne{}}, ROC-AUC of \textbf{\bestModelRocAuc{}}, and PR-AUC of \textbf{\bestModelPrAuc{}}, while Logistic Regression exhibited the highest churn recall (\LogisticRegressionRec{}) at minimal computational latency (\LogisticRegressionTime{}~s). Model-independent permutation importance identified contract duration (specifically month-to-month contracts), customer tenure, and cumulative billing as the dominant factors associated with churn risk. 
+
+Complementing supervised prediction, unsupervised K-Means clustering was executed without the churn label. Using elbow and silhouette analysis, three natural customer segments were discovered: Value-Oriented Core Customers (7.4\% churn rate), Long-Term Loyal Enterprise (15.2\% churn rate), and a High-Risk Attrition Cohort (44.0\% churn rate). These findings demonstrate how combining predictive modeling with unsupervised segmentation enables proactive, tiered customer retention strategies without making unsupported claims of direct churn prevention.
+
+\vspace{0.6cm}
+\begin{center}
+    {\bfseries\large CO -- PO / PSO ARTICULATION MATRIX\par}
+\end{center}
+\vspace{0.1cm}
+
+\noindent \textbf{CO1:} Apply Machine Learning concepts and basic parameter estimation methods to solve data-driven problems.\\
+\textbf{CO2:} Demonstrate regression and classification algorithms and performance measures to evaluate machine learning models.\\
+\textbf{CO3:} Illustrate the concepts of Neural Networks and Support Vector Machines in Machine learning problems.\\
+\textbf{CO4:} Demonstrate unsupervised learning concepts, ensemble methods and dimensionality reduction techniques to comprehend complex data patterns.
+
+\vspace{0.3cm}
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{CO} & \textbf{PO1} & \textbf{PO2} & \textbf{PO3} & \textbf{PO4} & \textbf{PO5} & \textbf{PO6} & \textbf{PO7} & \textbf{PO8} & \textbf{PO9} & \textbf{PO10} & \textbf{PO11} & \textbf{PSO1} & \textbf{PSO2} \\
+\hline
+\textbf{CO1} & 3 & 2 & 2 & -- & -- & -- & -- & -- & -- & -- & 2 & 3 & 2 \\
+\hline
+\textbf{CO2} & 3 & 3 & 3 & 2 & 3 & -- & -- & -- & -- & -- & 2 & 3 & 2 \\
+\hline
+\textbf{CO3} & 2 & 2 & 3 & -- & 3 & -- & -- & -- & -- & -- & 2 & 3 & 2 \\
+\hline
+\textbf{CO4} & 2 & 3 & 2 & 3 & 2 & -- & -- & -- & -- & -- & 2 & 3 & 2 \\
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{0.4cm}
+\begin{center}
+    {\bfseries\large SUSTAINABLE DEVELOPMENT GOALS (SDG) ADDRESSED\par}
+\end{center}
+\vspace{0.1cm}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|p{2.8cm}|p{2.2cm}|p{8.8cm}|}
+\hline
+\textbf{SDG} & \textbf{Target} & \textbf{Justification} \\
+\hline
+\textbf{SDG 9: Industry, Innovation and Infrastructure} & Target 9.5, Target 9.c & Enhances technological and analytical capabilities in telecommunication infrastructure by establishing data-driven predictive systems, supporting robust digital connectivity and operational service resilience. \\
+\hline
+\textbf{SDG 8: Decent Work and Economic Growth} & Target 8.2 & Fosters higher levels of economic productivity and operational efficiency through technological upgrading and proactive customer relationship management in digital service enterprises. \\
+\hline
+\end{tabular}
+\end{table}

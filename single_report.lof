@@ -1,0 +1,17 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces End-to-End System Architecture for Churn Prediction and Customer Segmentation}}{15}{figure.caption.6}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Exploratory Analysis Demonstrating Structural Contract and Tenure Churn Disparities}}{22}{figure.caption.7}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Exploratory Analysis of Billing Charges and Settlement Channels}}{22}{figure.caption.8}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparative Metric Evaluation Across the Four Primary Classifiers}}{26}{figure.caption.10}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Empirical Confusion Matrices on the Held-Out Test Set ($N=1,409$)}}{27}{figure.caption.11}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Discrimination Trajectories Across Varying Decision Thresholds}}{28}{figure.caption.12}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Feature Importance Rankings and Directional Log-Odds Coefficients}}{28}{figure.caption.13}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Cluster Quality Evaluation Metrics for Optimal $k$ Selection}}{29}{figure.caption.14}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Visual Representation of Discovered Customer Clusters and Post-Hoc Profiles}}{30}{figure.caption.15}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

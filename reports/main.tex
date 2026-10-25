@@ -1,0 +1,102 @@
+\documentclass[12pt,a4paper]{report}
+
+% ------------------------------------------------------------------------------
+% PACKAGES AND CONFIGURATION
+% ------------------------------------------------------------------------------
+\usepackage[left=3.2cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{lmodern}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black,
+    bookmarks=true,
+    bookmarksnumbered=true
+]{hyperref}
+
+% ------------------------------------------------------------------------------
+% CODE LISTING CONFIGURATION
+% ------------------------------------------------------------------------------
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.96,0.97,0.98}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    frame=single,
+    rulecolor=\color{gray!30}
+}
+\lstset{style=mystyle}
+
+% ------------------------------------------------------------------------------
+% DYNAMIC EXPERIMENT MACROS (FROM REAL PYTHON OUTPUTS)
+% ------------------------------------------------------------------------------
+\input{generated/experiment_macros.tex}
+
+% ------------------------------------------------------------------------------
+% DOCUMENT COMMENCES
+% ------------------------------------------------------------------------------
+\begin{document}
+
+% Preliminary Pages: Title Page, Certificate, Abstract, CO-PO Matrix, SDG Table
+\include{chapters/ch0_preliminary}
+
+% Table of Contents, List of Figures, List of Tables
+\newpage
+\tableofcontents
+\newpage
+\listoftables
+\newpage
+\listoffigures
+
+% Main Body: Chapters 1 to 8 (Arabic numbering, starting at 5 per institutional template)
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{5}
+
+\include{chapters/ch1_introduction}
+\include{chapters/ch2_problem_definition}
+\include{chapters/ch3_literature_survey}
+\include{chapters/ch4_methodology}
+\include{chapters/ch5_implementation}
+\include{chapters/ch6_results}
+\include{chapters/ch7_conclusion}
+\include{chapters/ch8_sdg}
+
+% References
+\newpage
+\addcontentsline{toc}{chapter}{REFERENCES}
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+% Appendix
+\newpage
+\include{chapters/appendix}
+
+\end{document}

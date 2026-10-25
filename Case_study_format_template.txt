@@ -1,0 +1,207 @@
+=== Case_study_format_template.pdf ===
+Pages: 14
+
+--- PAGE 1 ---
+[PROJECT / CASE STUDY TITLE]
+A CASE STUDY REPORT
+submitted by
+[STUDENT NAME] ([REGISTER NUMBER])
+as part of the course
+[COURSE CODE] - [COURSE NAME]
+to
+The APJ Abdul Kalam Technological University in partial fulfilment of the
+requirements for the award of the Degree
+of
+Bachelor of Technology
+In
+[BRANCH / DEPARTMENT]
+Department of [DEPARTMENT NAME]
+[INSTITUTION NAME]
+[CITY - PIN CODE]
+[MONTH YEAR]
+
+--- PAGE 2 ---
+CERTIFICATE
+This is to certify that the report entitled”[PROJECT / CASE STUDY TITLE]”,
+submitted by [STUDENT NAME] ([REGISTER NUMBER]) to [INSTITU-
+TION NAME] for the award of the degree of Bachelor of Technology in [BRANCH
+/ DEPARTMENT], is a bonafide record of the course project work carried out by
+[him/her], as part of the course [COURSE CODE] [COURSE NAME], under my su-
+pervision and guidance.
+[F ACULTY NAME]
+Faculty-in-charge
+Place: [PLACE]
+Date: [DD/MM/YYYY]
+
+--- PAGE 3 ---
+ABSTRACT
+[Abstract text goes here – a short summary of the problem, the dataset/method used,
+and the key result.]
+CO – PO / PSO ARTICULATION MATRIX
+CO1: [Course Outcome 1 statement.]
+CO2: [Course Outcome 2 statement.]
+CO3: [Course Outcome 3 statement.]
+CO4: [Course Outcome 4 statement.]
+CO 1 2 3 4 5 6 7 8 9 10 11 PSO1 PSO2
+CO1
+CO2
+CO3
+CO4
+SUSTAINABLE DEVELOPMENT GOALS (SDG) ADDRESSED
+SDG T arget Justification
+ii
+
+--- PAGE 4 ---
+CONTENTS
+ABSTRACT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ii
+1 INTRODUCTION 5
+1.1 PURPOSE OF THE SYSTEM . . . . . . . . . . . . . . . . . . . . . . 5
+1.2 RELEV ANCE AND SCOPE OF THE SYSTEM . . . . . . . . . . . . . 5
+2 PROBLEM DEFINITION 6
+2.1 PROBLEM STATEMENT . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.2 OBJECTIVES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3 LITERATURE SUR VEY 7
+4 PROPOSED SYSTEM AND METHODOLOGY 8
+4.1 SYSTEM ARCHITECTURE . . . . . . . . . . . . . . . . . . . . . . . 8
+4.2 DATASET DESCRIPTION . . . . . . . . . . . . . . . . . . . . . . . . 8
+4.3 DATA PRE-PROCESSING . . . . . . . . . . . . . . . . . . . . . . . . 8
+4.4 FEATURE ANALYSIS . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+4.5 MODEL BUILDING . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+4.6 EV ALUATION METRICS . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.7 TOOLS AND TECHNOLOGIES . . . . . . . . . . . . . . . . . . . . . 9
+5 IMPLEMENTATION 10
+5.1 DATASET ACQUISITION . . . . . . . . . . . . . . . . . . . . . . . . . 10
+5.2 DATA PRE-PROCESSING . . . . . . . . . . . . . . . . . . . . . . . . 10
+5.3 FEATURE ANALYSIS . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+5.4 MODEL BUILDING . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+5.5 EV ALUATION . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+iii
+
+--- PAGE 5 ---
+6 RESULTS AND DISCUSSION 11
+6.1 RESULTS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+6.2 DISCUSSION . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+7 CONCLUSION 12
+8 SUSTAINABLE DEVELOPMENT GOALS (SDGs) 13
+iv
+
+--- PAGE 6 ---
+CHAPTER 1
+INTRODUCTION
+1.1 PURPOSE OF THE SYSTEM
+[Explain what the system/study is meant to achieve and why.]
+1.2 RELEV ANCE AND SCOPE OF THE SYSTEM
+Relevance
+[Why this problem matters, who it affects, and what the current gap is.]
+Scope
+[What this project covers, and what it could be extended to.]
+5
+
+--- PAGE 7 ---
+CHAPTER 2
+PROBLEM DEFINITION
+2.1 PROBLEM STATEMENT
+[A concise statement of the problem being solved.]
+2.2 OBJECTIVES
+Objective 1
+Objective 2
+Objective 3
+Objective 4
+6
+
+--- PAGE 8 ---
+CHAPTER 3
+LITERATURE SUR VEY
+[Overview paragraph introducing the survey.]
+[Sub-theme 1]
+[Discussion of relevant prior work under this theme.]
+[Sub-theme 2]
+[Discussion of relevant prior work under this theme.]
+[Sub-theme 3]
+[Discussion of relevant prior work under this theme.]
+7
+
+--- PAGE 9 ---
+CHAPTER 4
+PROPOSED SYSTEM AND METHODOLOGY
+4.1 SYSTEM ARCHITECTURE
+[Describe the overall pipeline / architecture.]
+4.2 DATASET DESCRIPTION
+[Describe the dataset: source, size, and fields.]
+ [Field 1]– [description]
+ [Field 2]– [description]
+ [Field 3]– [description]
+4.3 DATA PRE-PROCESSING
+[List the cleaning / preprocessing steps.]
+ [Step 1]– [description]
+ [Step 2]– [description]
+ [Step 3]– [description]
+4.4 FEATURE ANALYSIS
+[Summarise which features matter and why.]
+4.5 MODEL BUILDING
+[List and briefly describe the models used.]
+8
+
+--- PAGE 10 ---
+4.PROPOSED SYSTEM AND METHODOLOGY EV ALUATION METRICS
+ [Model 1] – [description]
+ [Model 2] – [description]
+ [Model 3] – [description]
+4.6 EV ALUATION METRICS
+[List and justify the metrics used.]
+ [Metric 1]– [description]
+ [Metric 2]– [description]
+4.7 TOOLS AND TECHNOLOGIES
+[List the languages, libraries, and tools used.]
+9
+
+--- PAGE 11 ---
+CHAPTER 5
+IMPLEMENTATION
+[Introductory sentence for this chapter.]
+5.1 DATASET ACQUISITION
+[How and where the dataset was obtained.]
+5.2 DATA PRE-PROCESSING
+[Implementation-level detail of the preprocessing steps.]
+5.3 FEATURE ANALYSIS
+[Implementation-level detail of the feature analysis.]
+Figure 5.1: [Figure caption.]
+5.4 MODEL BUILDING
+[Implementation-level detail of model training.]
+5.5 EV ALUATION
+[How predictions are generated and compared, and how the code is organised. The
+complete code is given in Listing 5.1.]
+Listing 5.1 – Complete implementation
+1 # [ Your c o m p l e t e i m p l e m e n t a t i o n code goes here ]
+10
+
+--- PAGE 12 ---
+CHAPTER 6
+RESULTS AND DISCUSSION
+6.1 RESULTS
+[Summarise what was tested and on what data split.]
+Table 6.1: [Table caption – e.g. Model performance on the held-out test set]
+Model Accuracy Precision Recall F1-score ROC-AUC
+[Discuss what the table shows.]
+Figure 6.1: [Figure caption.]
+Figure 6.2: [Figure caption.]
+[Discuss what the figures show.]
+6.2 DISCUSSION
+[Interpret the results, note trade-offs, and state any caveats or limitations.]
+11
+
+--- PAGE 13 ---
+CHAPTER 7
+CONCLUSION
+[Summarise what was done, the key finding, and its practical implication.]
+12
+
+--- PAGE 14 ---
+CHAPTER 8
+SUSTAINABLE DEVELOPMENT GOALS
+(SDGS)
+[Intro sentence.]
+ SDG [N] – [Goal name]:[Justification.]
+ SDG [N] – [Goal name]:[Justification.]
+13
+
